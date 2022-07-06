@@ -1,0 +1,46 @@
+from securityInterface import securityInterface
+class securityInterface():
+    def __init__(self, name: str) -> None:
+        pass
+    
+    def getName(self) -> str:
+        return "Implement Me!"
+    
+class security(securityInterface):
+    def __init__(self, name: str): 
+        self.name = name 
+
+    def getName(self): 
+        return self.name
+
+class positionInterface():
+    def __init__(self, security, initialPosition: int) -> None:
+        pass
+
+    def getSecurity(self) -> securityInterface:
+        pass
+
+    def getPosition(self) -> int:
+        pass
+    
+    def setPosition(self, inputValue: int) -> None:
+        pass
+    
+    def addPosition(self, inputValue: int) -> None:
+        pass
+   
+class position(positionInterface):
+    def __init__(self, security, initialPosition: int):
+        self.security = isinstance(security)
+        self.initialPosition = position
+
+    def getSecurity(self):
+        return self.security
+
+    def getPosition(self):
+        return self.initialPosition
+    
+#     def setPosition(self, inputValue: int):
+#         return 
+    
+#     def addPosition(self, inputValue: int):
