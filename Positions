@@ -1,3 +1,14 @@
+%%writefile ../implementations/positionSolution.py 
+#Uncomment line above & run cell to save solution
+#TODO Define class that implements positionInterface & allows for the management of a position
+
+import os
+import sys
+module_path = os.path.abspath(os.path.join('..'))
+if module_path not in sys.path:
+    sys.path.append(module_path)
+
+from interfaces.securityInterface import securityInterface
 class positionInterface():
     def __init__(self, security, initialPosition: int) -> None:
         pass
@@ -16,13 +27,21 @@ class positionInterface():
    
 class position(positionInterface):
     
-    security = {}
+    ##create a new varibale 
     
-    def __init__(self, security, initialPosition: int):
-        self.security = if isinstance(security,str): 
-                self.security = security
-        self.initialPosition = initialposition
+    def __init__(self, newSecurity, initialPosition: int):
+        print(newSecurity)
+        self.security = newSecurity
+        print('security', newSecurity)
+        self.initialPosition = initialPosition
+        print('initialPosition', initialPosition)
 
+        if isinstance(newSecurity,str):   
+            self.security = security(newsecurity)
+            print('security', newSecurity)
+        else:  
+             self.securirty = newSecurity
+       
     def getSecurity(self):
         return self.security
 
@@ -30,9 +49,11 @@ class position(positionInterface):
         return self.initialPosition
     
     def setPosition(self, inputValue: int):
-        self.initialposition = inputvalue
+        self.initialPosition = inputvalue
     
     def addPosition(self, inputValue: int):
+        
+        self.initialPosition += inputValue
         self.initialposition += inputValue
 
 ---------------------------------
